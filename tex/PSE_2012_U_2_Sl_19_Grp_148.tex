@@ -5,11 +5,17 @@
 \usepackage{xcolor}
 \usepackage{listings}
 
+\usepackage{fancyhdr}
 \usepackage{minted}
 
 \title{PSE_2012_U_2_Sl_19_Grp_148}
 \author{Clemens Mayer}
 \date{\today}
+
+\pagestyle{fancy}
+\lhead{Peter Faber (2836641)}
+\chead{Clemens Mayer (2815170)} 
+\rhead{Han Ngoc Phan (2821355)}
 
 \lstdefinestyle{BashOutputStyle}{
   basicstyle=\small\ttfamily,
@@ -37,7 +43,29 @@
 	- duration: int\\
 \hline
 	+ play(): void\\
-	+ play(seconds int): void\\
+	+ play(seconds: int): void\\
+	+ getDiscription(): void\\
+	+ getDuration(): void\\
+	+ loop(): void\\
+	+ getTitle(): String\\
+	+ getArtist(): String\\
+	+ getAlbum(): String\\
+	+ setTitle(): void\\
+	+ setArtist(): void\\
+	+ setAlbums(): void\\
+\hline
+\end{tabular}
+\begin{tabular}{|p{0.33\textwidth}|}
+\hline
+	class MaschenDrahtSong\\
+\hline
+	- Title: String\\
+	- Artist: String\\
+	- Album: String\\
+	- duration: int\\
+\hline
+	+ play(): void\\
+	+ play(seconds: int): void\\
 	+ getDiscription(): void\\
 	+ getDuration(): void\\
 	+ loop(): void\\
@@ -53,45 +81,25 @@
 \hline
 	class TourSong\\
 \hline
-	- String Title;\\
-	- String Artist;\\
-	- String Album;\\
-	- int duration; //in seconds\\
+	- Title: String\\
+	- Artist: String\\
+	- Album: String\\
+	- duration: int\\
 \hline
-	+ void play();\\
-	+ void play(int sec);\\
-	+ void getDiscription();\\
-	+ void getDuration();\\
-	+ void loop();\\
-	+ String getTitle();\\
-	+ String getArtist();\\
-	+ String getAlbum();\\
-	+ void setTitle();\\
-	+ void setArtist();\\
-	+ void setAlbums();\\
-\hline
-\end{tabular}
-\begin{tabular}{|p{0.33\textwidth}|}
-\hline
-	class MaschenDrahtSong\\
-\hline
-	- String Title;\\
-	- String Artist;\\
-	- String Album;\\
-	- int duration; //in seconds\\
-\hline
-	+ void play();\\
-	+ void play(int sec);\\
-	+ void getDiscription();\\
-	+ void getDuration();\\
-	+ void loop();\\
-	+ String getTitle();\\
-	+ String getArtist();\\
-	+ String getAlbum();\\
-	+ void setTitle();\\
-	+ void setArtist();\\
-	+ void setAlbums();\\
+	+ play(): void\\
+	+ play(seconds: int): void\\
+	+ getDiscription(): void\\
+	+ getDuration(): void\\
+	+ loop(): void\\
+	+ getTitle(): String\\
+	+ getArtist(): String\\
+	+ getAlbum(): String\\
+	+ setTitle(): void\\
+	+ setArtist(): void\\
+	+ setAlbums(): void\\
 \hline
 \end{tabular}
+
+
 
 \end{document}
