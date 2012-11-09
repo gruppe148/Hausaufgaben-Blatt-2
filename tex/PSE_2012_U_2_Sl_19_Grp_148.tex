@@ -2,6 +2,8 @@
 \usepackage{fontspec}
 
 \usepackage{bashful}
+\usepackage{xcolor}
+\usepackage{listings}
 
 \usepackage{minted}
 
@@ -9,34 +11,42 @@
 \author{Clemens Mayer}
 \date{\today}
 
+\lstdefinestyle{BashOutputStyle}{
+  basicstyle=\small\ttfamily,
+  numbers=none,
+  linewidth=\linewidth,
+  xleftmargin=0.1\linewidth,
+}
+
 \begin{document}
 %\input{/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/mintedinput}
 
 \section*{Aufgabe 4}
-\bash[script,stdout,stderrFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.stderr,scriptFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/script.sh,stdoutFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.stdout,exitCodeFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.exitCodes]
-java ISTEMediaPlayer
-\END
+%\bash[script,stderrFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.stderr,scriptFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/script.sh,stdoutFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.stdout,exitCodeFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.exitCodes]
+%java ISTEMediaPlayer
+%\END
+\lstinputlisting[style=BashOutputStyle]{/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.stdoutt}
 \section*{Aufgabe 5}
 \begin{tabular}{|p{0.33\textwidth}|}
 \hline
 	class BugsBunnyMusik\\
 \hline
-	- String Title;\\
-	- String Artist;\\
-	- String Album;\\
-	- int duration; //in seconds\\
+	- Title: String\\
+	- Artist: String\\
+	- Album: String\\
+	- duration: int\\
 \hline
-	+ void play();\\
-	+ void play(int sec);\\
-	+ void getDiscription();\\
-	+ void getDuration();\\
-	+ void loop();\\
-	+ String getTitle();\\
-	+ String getArtist();\\
-	+ String getAlbum();\\
-	+ void setTitle();\\
-	+ void setArtist();\\
-	+ void setAlbums();\\
+	+ play(): void\\
+	+ play(seconds int): void\\
+	+ getDiscription(): void\\
+	+ getDuration(): void\\
+	+ loop(): void\\
+	+ getTitle(): String\\
+	+ getArtist(): String\\
+	+ getAlbum(): String\\
+	+ setTitle(): void\\
+	+ setArtist(): void\\
+	+ setAlbums(): void\\
 \hline
 \end{tabular}
 \begin{tabular}{|p{0.33\textwidth}|}
@@ -84,7 +94,4 @@ java ISTEMediaPlayer
 \hline
 \end{tabular}
 
-%%\bash[stdout,stderrFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.stderr,scriptFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/script.sh,stdoutFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.stdout,exitCodeFile=/Users/clemens/Documents/uni/PSE/gruppe_148/Hausaufgaben-Blatt-2/tex/PSE_2012_U_2_Sl_19_Grp_148.exitCodes]
-%ls
-%\END
 \end{document}
